@@ -10,7 +10,7 @@ colorama.init(autoreset=True)
 
 
 
-host = '192.168.2.1' #local
+host = '10.162.0.2' #local
 port = 5555
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
