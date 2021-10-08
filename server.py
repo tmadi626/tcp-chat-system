@@ -33,7 +33,7 @@ def serverMsg():
             message = input("Announce: ")
 
             for client in clients:
-                client.send( f'{Back.GREEN}{Fore.BLACK}[Server]:{Style.RESET_ALL} {message}'.encode('ascii'))
+                client.send( f'{Back.GREEN}{Fore.BLACK}[Server]:{Style.RESET_ALL} {message}'.encode('utf-8'))
         except:
             pass
 
@@ -45,14 +45,14 @@ def sendToEveryone(message):
 def handle(client, nickname, COLOR):
     while True:
         try:
-            message = client.recv(1024).decode('ascii')
-            broadcast( client, f'{COLOR}{nickname}{Fore.RESET}: {message}'.encode('ascii') )
+            message = client.recv(1024).decode('utf-8')
+            broadcast( client, f'{COLOR}{nickname}{Fore.RESET}: {message}'.encode('utf-8') )
         except:
             index = clients.index(client)
             clients.remove(client)
             client.close()
             nickname = nicknames[index]
-            sendToEveryone( f"{COLOR}{nickname}{Fore.RESET}{Style.DIM} has left the chat!".encode('ascii') )
+            sendToEveryone( f"{COLOR}{nickname}{Fore.RESET}{Style.DIM} has left the chat!".encode('utf-8') )
             nicknames.remove(nickname)
             break
 
@@ -68,15 +68,15 @@ def receive():
 
         COLOR = random.choice(colors)
 
-        client.send(f'{Style.BRIGHT}NICK,{COLOR},{Fore.RESET}'.encode('ascii'))
+        client.send(f'{Style.BRIGHT}NICK,{COLOR},{Fore.RESET}'.encode('utf-8'))
 
-        nickname = client.recv(1024).decode('ascii')
+        nickname = client.recv(1024).decode('utf-8')
         nicknames.append(nickname)
         clients.append(client)
 
         print(f'Nickname of the client is {COLOR}{nickname}')
-        sendToEveryone( f'{Back.GREEN}{Fore.BLACK}[MSG]:{Style.RESET_ALL} {COLOR}{nickname}{Fore.RESET} has joined the chat!'.encode('ascii') )
-        client.send( f'\n{Back.WHITE}{Fore.GREEN}Welcome to the server!{Fore.RESET}{Style.RESET_ALL}'.encode('ascii') )
+        sendToEveryone( f'{Back.GREEN}{Fore.BLACK}[MSG]:{Style.RESET_ALL} {COLOR}{nickname}{Fore.RESET} has joined the chat!'.encode('utf-8') )
+        client.send( f'\n{Back.WHITE}{Fore.GREEN}Welcome to the server!{Fore.RESET}{Style.RESET_ALL}'.encode('utf-8') )
 
         thread = threading.Thread( target= handle, args=(client,nickname, COLOR) )
         thread.start()
