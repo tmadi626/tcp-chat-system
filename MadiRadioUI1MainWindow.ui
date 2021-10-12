@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>550</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>650</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Madi Radio</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+	background-color: rgba(38,8,24,255);
+}</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="StartMenu">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+	background-color: rgba(38,8,24,255);
+}
+
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QFrame" name="mainFrame">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">.QPushButton{
+	border: 3px solid #440f2b;
+	border-style: outset;
+	background-color: #4c1130;
+	color: white;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 5px;
+	border-radius: 15px;
+}
+.QPushButton::hover{
+	border: 3px solid #6b1e47;
+	background-color: #591539;
+	color: pink;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>6</number>
+      </property>
+      <property name="midLineWidth">
+       <number>8</number>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0">
+       <property name="spacing">
+        <number>18</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="madiRadioPic">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+margin: 50%;
+}</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;p align=&quot;center&quot;&gt;
+&lt;span style=&quot; font: 20px;color:#ffffff;&quot;&gt;Taha's Radio&lt;br/&gt;Welcome&lt;/span&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
+         </property>
+         <property name="buddy">
+          <cstring>madiRadioPic</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="selectnamePushButton_1">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	border: 3px solid #440f2b;
+	border-style: outset;
+	background-color: #4c1130;
+	color: white;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 5px;
+	border-radius: 15px;
+}
+QPushButton::hover{
+	border: 3px solid #6b1e47;
+	background-color: #591539;
+	color: pink;
+}</string>
+         </property>
+         <property name="text">
+          <string>Select Name</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="joinserverPushButton_2">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	border: 3px solid #440f2b;
+	border-style: outset;
+	background-color: #4c1130;
+	color: white;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 5px;
+}
+QPushButton::hover{
+	border: 3px solid #6b1e47;
+	background-color: #591539;
+	color: pink;
+}</string>
+         </property>
+         <property name="text">
+          <string>Join Server</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exitPushButton_3">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	border: 3px solid #440f2b;
+	border-style: outset;
+	background-color: #4c1130;
+	color: white;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 5px;
+}
+QPushButton::hover{
+	border: 3px solid #6b1e47;
+	background-color: #591539;
+	color: pink;
+}</string>
+         </property>
+         <property name="text">
+          <string>Exit</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>joinserverPushButton_2</tabstop>
+  <tabstop>exitPushButton_3</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../Pictures.qrc"/>
+ </resources>
+ <connections/>
+</ui>
